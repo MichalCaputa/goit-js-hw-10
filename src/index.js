@@ -50,9 +50,10 @@ function renderCountriesList(countries) {
 function renderCountryCard(country) {
   const parsedLangs = country.languages.map(lang => lang.name).join(', ');
   const markup = ` <div class=country>       
-            <b>Name</b>: ${country.name}</p>
+  <img src="${country.flags.svg}" alt="${country.name} flag" width="40" >       
+  ${country.name}</p>
             <b>Population</b>: ${country.population}</p>
-            <img src="${country.flags.svg}" alt="${country.name} flag" width="400" >
+            <b>Capital</b>: ${country.capital}</p>
              <b>Languages</b>: ${parsedLangs}</p>
              </div>
         
